@@ -121,9 +121,10 @@ const quotes = [
     },
 ];
 
-const quote = document.querySelector("#quote span:first-child")
-const author = document.querySelector("#quote span:last-child")
-const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
-
+const quote = document.querySelector("#quote span:first-child")     // #quote에서 첫번째 span
+const author = document.querySelector("#quote span:last-child")     // #quote에서 두번째 span
+const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];      // Math.random()는 0부터 1 랜덤 숫자 생성 ex) 0.0223..., 0.953...
+                                                                            // floor()는 소수점 이하를 버림 ex) 3.433... -> 3, 5.853... -> 5
+                                                                            // Math.floor(Math.random() * quotes.length)는 0부터 배열 길이 사이 정수 랜덤 생성
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;
