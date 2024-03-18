@@ -1,9 +1,12 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
+const hiddenToDo = document.getElementById("todo-form");
+const hiddenList = document.getElementById("todo-list");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
+
 
 function onLoginSubmit(event) {
     /* 
@@ -20,10 +23,12 @@ function onLoginSubmit(event) {
 function paintGreetings(username) {
     /* 
     #greeting인 곳에 `안녕하세요 ${username}님` 값으로 설정 후
-    greeting에 있는 hidden클래스 제거
+    greeting, hiddenToDo, hiddenList에 있는 hidden클래스 제거
     */
     greeting.innerText = `안녕하세요 ${username}님`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    hiddenToDo.classList.remove(HIDDEN_CLASSNAME);
+    hiddenList.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
