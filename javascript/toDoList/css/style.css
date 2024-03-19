@@ -89,7 +89,6 @@ img {
     background-color: #ccc;
     width: 0;
     height: 3px;
-    border-radius: 2px;
     transform: translateX(-50%);
     transition: 0.5s;
     z-index: 2;
