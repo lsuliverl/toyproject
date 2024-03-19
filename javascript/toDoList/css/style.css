@@ -39,9 +39,10 @@ img {
 
 /* 인사 */
 #greeting {
+    font-size: 50px;
     position: absolute;
     color: white;
-    top: 45%;
+    top: 42%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -50,7 +51,7 @@ img {
 #todo-form {
     position: absolute;
     width: 600px;
-    top: 55%;
+    top: 52%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
