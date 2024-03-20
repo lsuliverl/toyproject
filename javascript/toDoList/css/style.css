@@ -34,17 +34,19 @@ img {
     position: absolute;
     top: 35%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
 }
 
 /* 인사 */
 #greeting {
+    width: 1500px;
+    text-align: center;
     font-size: 50px;
     position: absolute;
     color: white;
     top: 42%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
 }
 
 /* todolist 입력 */
@@ -53,7 +55,7 @@ img {
     width: 600px;
     top: 52%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
 }
 
 #todo-input {
