@@ -1,3 +1,4 @@
+/* 27인치 qhd모니터 기준 스타일 */
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
 * {
@@ -180,6 +181,7 @@ button {
     transform: translateY(-50%);
 }
 
+/* todo-list */
 #todo-list {
     font-size: 35px;
     font-family: "Nanum Pen Script", cursive;
