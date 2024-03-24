@@ -138,7 +138,26 @@ img {
     text-align: right;
 }
 
+#city {
+    position: absolute;
+    right: 4%;
+    transform: translateY(80%);
+}
+
+#sky {
+    position: absolute;
+    right: 1%;
+    transform: translateY(80%);
+}
+
+#temp {
+    position: absolute;
+    right: 4%;
+    transform: translateY(-50%);
+}
+
 #weatherIcon {
     position: relative;
-    right: 50%;
+    right: 1%;
+    transform: translateY(-50%);
 }
