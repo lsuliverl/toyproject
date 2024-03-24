@@ -25,6 +25,7 @@ img {
     top: 0;
     left: 0;
     z-index: -1;
+    pointer-events: none;
 }
 
 /* 시계 */
@@ -111,4 +112,16 @@ img {
     
 #todo-input:focus ~ span {
     width: 100%;
+}
+
+/* 명언 */
+#quote {
+    width: 1500px;
+    text-align: center;
+    font-size: 25px;
+    position: absolute;
+    color: white;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
 }

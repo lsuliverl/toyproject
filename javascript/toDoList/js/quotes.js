@@ -127,4 +127,4 @@ const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];      // M
                                                                             // floor()는 소수점 이하를 버림 ex) 3.433... -> 3, 5.853... -> 5
                                                                             // Math.floor(Math.random() * quotes.length)는 0부터 배열 길이 사이 정수 랜덤 생성
 quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+author.innerText = `-${todaysQuote.author}-`;
