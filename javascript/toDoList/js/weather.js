@@ -11,9 +11,11 @@ function onGeoOk(position) {
         .then((data) => {
             const div = document.querySelector("#weather");                                                                      
             const weather = document.querySelector("#weather span:first-child");
+            const temp = document.querySelector("#weather span:nth-of-type(2)");
             const city = document.querySelector("#weather span:last-child");
             city.innerText = `${data.name}`;                                                         // 현재 위치의 도시 이름 text 출력
-            weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;                      // 날씨와 온도 text 출력
+            weather.innerText = `${data.weather[0].main}`;                      // 날씨와 온도 text 출력
+            temp.innerText = `${data.main.temp}`;                      // 날씨와 온도 text 출력
             const img = document.createElement("img");                                              // img Element 생성
             div.appendChild(img);                                                                   // div에 img 자식 추가
             img.id = `weatherIcon`;                                                                 // /id 추가

@@ -138,3 +138,7 @@ img {
     text-align: right;
 }
 
+#weatherIcon {
+    position: relative;
+    right: 50%;
+}
