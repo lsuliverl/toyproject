@@ -15,7 +15,7 @@ function onGeoOk(position) {
             const city = document.querySelector("#weather span:last-child");
             city.id = `city`;                                                                       // id 추가
             city.innerText = `${data.name}`;                                                        // 현재 위치의 도시 이름 text 출력
-            weather.id = `weather`;                                                                 // id 추가
+            weather.id = `sky`;                                                                     // id 추가
             weather.innerText = `${data.weather[0].main}`;                                          // 날씨 text 출력
             temp.id = `temp`;                                                                       // id 추가
             temp.innerText = `${data.main.temp}`;                                                   // 온도 text 출력
