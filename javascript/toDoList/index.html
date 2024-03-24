@@ -9,19 +9,15 @@
     <body>
         <h2 id="clock">00:00:00</h2>
         <form id="login-form" class="hidden">
-            <input 
-                required 
-                maxlength="15" 
-                type="text" 
-                placeholder="이름을 입력 해주세요." 
-            />
-            <button>Login</button>
+            <input id="input" type="text" maxlength="15" required/>
+            <label id="label">이름을 입력 해주세요.</label>
+            <span id="span"></span>
         </form>
         <h1 id="greeting" class="hidden"></h1>
         <form id="todo-form" class="hidden">
-            <input id="todo-input" type="text" required />
-            <label id="todo-label">해야 할 일이 무엇인가요?</label>
-            <span id="todo-span"></span>
+            <input id="input" type="text" required />
+            <label id="label">해야 할 일이 무엇인가요?</label>
+            <span id="span"></span>
         </form>
         <ul id="todo-list" class="hidden"></ul>
         <div id="quote">

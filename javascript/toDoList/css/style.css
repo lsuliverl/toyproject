@@ -21,6 +21,63 @@ img {
     pointer-events: none;
 }
 
+
+#input {
+    font-size: 20px;
+    color: white;
+    width: 600px;
+    border: none;
+    border-bottom: solid white 3px;
+    padding-bottom: 10px;
+    text-align: center;
+    position: relative;
+    background: none;
+    z-index: 1;
+}
+
+#input:focus {
+    outline: none;
+}
+
+#label {
+    width: 600px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    bottom: 10px;
+    transition: all .2s;
+}
+
+#span {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: #ccc;
+    width: 0;
+    height: 3px;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    z-index: 2;
+}
+
+#input:focus ~ label {
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 40px;
+    color: #ccc;
+    font-weight: bold;
+}
+    
+#input:focus ~ span {
+    width: 100%;
+}
+
+
 /* 배경 이미지 */
 #bgImg {
     width: 100%; 
@@ -53,8 +110,8 @@ img {
     transform: translateX(-50%);
 }
 
-/* todolist 입력 */
-#todo-form {
+/* 이름 입력 */
+#login-form {
     position: absolute;
     width: 600px;
     top: 52%;
@@ -62,59 +119,13 @@ img {
     transform: translateX(-50%);
 }
 
-#todo-input {
-    font-size: 20px;
-    color: white;
-    width: 600px;
-    border: none;
-    border-bottom: solid white 3px;
-    padding-bottom: 10px;
-    text-align: center;
-    position: relative;
-    background: none;
-    z-index: 1;
-}
-
-#todo-input:focus {
-    outline: none;
-}
-
-#todo-label {
-    width: 600px;
-    text-align: center;
-    font-weight: bold;
+/* todolist 입력 */
+#todo-form {
     position: absolute;
-    color: white;
+    width: 600px;
+    top: 52%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 20px;
-    bottom: 10px;
-    transition: all .2s;
-}
-
-#todo-span {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    background-color: #ccc;
-    width: 0;
-    height: 3px;
-    transform: translateX(-50%);
-    transition: 0.5s;
-    z-index: 2;
-}
-
-#todo-input:focus ~ label {
-    font-size: 20px;
-    font-weight: bold;
-    bottom: 40px;
-    color: #ccc;
-    font-weight: bold;
-}
-    
-#todo-input:focus ~ span {
-    width: 100%;
 }
 
 /* 명언 */
