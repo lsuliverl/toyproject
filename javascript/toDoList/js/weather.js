@@ -16,8 +16,9 @@ function onGeoOk(position) {
             weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;                      // 날씨와 온도 text 출력
             const img = document.createElement("img");                                              // img Element 생성
             div.appendChild(img);                                                                   // div에 img 자식 추가
-            img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`               // 이미지 경로 설정
-            img.alt = `${data.weather[0].description}`                                              // 해당 이미지를 대체할 텍스트를 명시 설정
+            img.id = `weatherIcon`;                                                                 // /id 추가
+            img.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;              // 이미지 경로 설정
+            img.alt = `${data.weather[0].description}`;                                             // 해당 이미지를 대체할 텍스트를 명시 설정
         });
 }
 

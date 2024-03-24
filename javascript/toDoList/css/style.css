@@ -17,6 +17,10 @@ body * {
     display: none;
 }
 
+img {
+    pointer-events: none;
+}
+
 /* 배경 이미지 */
 #bgImg {
     width: 100%; 
@@ -25,7 +29,6 @@ body * {
     top: 0;
     left: 0;
     z-index: -1;
-    pointer-events: none;
 }
 
 /* 시계 */
@@ -125,3 +128,13 @@ body * {
     left: 50%;
     transform: translateX(-50%);
 }
+
+/* 날씨 */
+#weather {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+    color: white;
+    text-align: right;
+}
+
