@@ -1,3 +1,6 @@
+/* 27인치 qhd모니터 기준 스타일 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -17,8 +20,74 @@ body * {
     display: none;
 }
 
-/* 배경 이미지 */
 img {
+    pointer-events: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+}
+
+
+#input {
+    font-size: 20px;
+    color: white;
+    width: 600px;
+    border: none;
+    border-bottom: solid white 3px;
+    padding-bottom: 10px;
+    text-align: center;
+    position: relative;
+    background: none;
+    z-index: 1;
+}
+
+#input:focus {
+    outline: none;
+}
+
+#label {
+    width: 600px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    bottom: 10px;
+    transition: all .2s;
+}
+
+#span {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    background-color: #ccc;
+    width: 0;
+    height: 3px;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    z-index: 2;
+}
+
+#input:focus ~ label {
+    font-size: 20px;
+    font-weight: bold;
+    bottom: 40px;
+    color: #ccc;
+    font-weight: bold;
+}
+    
+#input:focus ~ span {
+    width: 100%;
+}
+
+
+/* 배경 이미지 */
+#bgImg {
     width: 100%; 
     height: 100%;
     position: fixed;
@@ -44,7 +113,16 @@ img {
     font-size: 50px;
     position: absolute;
     color: white;
-    top: 42%;
+    top: 43%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 이름 입력 */
+#login-form {
+    position: absolute;
+    width: 600px;
+    top: 49%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -58,57 +136,57 @@ img {
     transform: translateX(-50%);
 }
 
-#todo-input {
-    font-size: 20px;
-    color: white;
-    width: 600px;
-    border: none;
-    border-bottom: solid white 3px;
-    padding-bottom: 10px;
+/* 명언 */
+#quote {
+    width: 1500px;
     text-align: center;
-    position: relative;
-    background: none;
-    z-index: 1;
-}
-
-#todo-input:focus {
-    outline: none;
-}
-
-#todo-label {
-    width: 600px;
-    text-align: center;
-    font-weight: bold;
+    font-size: 25px;
     position: absolute;
     color: white;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 20px;
-    bottom: 10px;
-    transition: all .2s;
 }
 
-#todo-span {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    background-color: #ccc;
-    width: 0;
-    height: 3px;
-    transform: translateX(-50%);
-    transition: 0.5s;
-    z-index: 2;
-}
-
-#todo-input:focus ~ label {
-    font-size: 20px;
-    font-weight: bold;
-    bottom: 40px;
-    color: #ccc;
-    font-weight: bold;
-}
-    
-#todo-input:focus ~ span {
+/* 날씨 */
+#weather {
     width: 100%;
+    bottom: 0;
+    position: absolute;
+    color: white;
+    text-align: right;
+}
+
+#city {
+    position: absolute;
+    right: 4%;
+    transform: translateY(80%);
+}
+
+#sky {
+    position: absolute;
+    right: 1%;
+    transform: translateY(80%);
+}
+
+#temp {
+    position: absolute;
+    right: 4%;
+    transform: translateY(-50%);
+}
+
+#weatherIcon {
+    position: relative;
+    right: 1%;
+    transform: translateY(-50%);
+}
+
+/* todo-list */
+#todo-list {
+    font-size: 35px;
+    font-family: "Nanum Pen Script", cursive;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: white;
 }
