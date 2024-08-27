@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <span>총 클릭한 횟수: 0</span>
+        <button id="btn">클릭</button>
+    </body>
+    <script>
+        let counter = 0;
+        const button = document.getElementById("btn");
+        const span = document.querySelector("span");
+        function handleClick() {
+            counter = counter + 1;
+            span.innerText = counter;
+        }
+        button.addEventListener("click", handleClick);
+    </script>
+</html>
