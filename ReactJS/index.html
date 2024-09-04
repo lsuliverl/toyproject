@@ -7,40 +7,28 @@
     <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-        /*
-        const root = document.getElementById("root");
-        let counter = 0;
-        function countUp() {
-            counter = counter + 1;
-            render();
-        }
-        function render() {
-            ReactDOM.render(<Container />, root);
-        }
-        function Container() {
-            return(
-                <div>
-                    <h3>총 클릭한 횟수: {counter}</h3>
-                    <button onClick={countUp}>클릭해줘</button>
-                </div>
-            );
-        }
-        render();
-        */
-        const root = document.getElementById("root");
         function App() {
-            const [counter, setCounter] = React.useState(0);
-            const onClick = () => {
-                // setCounter(counter + 1);
-                setCounter((current) => counter + 1);
+            const [minutes, setMinutes] = React.useState(0);
+            const onChange = () => {
+                setMinutes(event.target.value);
             };
+            const reset = () => setMinutes(0);
             return (
                 <div>
-                    <h3>총 클릭한 횟수: {counter}</h3>
-                    <button onClick={onClick}>클릭해줘</button>
+                    <h1>Super Converter</h1>
+                    <div>
+                        <label htmlFor="minutes">Minutes</label>
+                        <input value={minutes} id="minutes" placeholder="Minutes" type="number" onChange={onChange} />
+                    </div>
+                    <div>
+                        <label htmlFor="hours">Hours</label>
+                        <input value={Math.round(minutes / 60)} id="hours" placeholder="Hours" type="number" disabled />
+                    </div>
+                    <button onClick={reset}>리셋</button>
                 </div>
             );
         }
+        const root = document.getElementById("root");
         ReactDOM.render(<App />, root);
     </script>
 </html>
