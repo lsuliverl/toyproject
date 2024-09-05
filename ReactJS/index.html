@@ -44,7 +44,7 @@
                         />
                     </div>
                     <button onClick={reset}>리셋</button>
-                    <button onClick={onflip}>바뀜</button>
+                    <button onClick={onflip}>{flipped ? "시간->분" : "분 ->시간"}</button>
                 </div>
             );
         }
